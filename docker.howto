@@ -1,0 +1,2 @@
+docker build -t nodejs-1-app .
+docker run -it --rm --name running-nodejs-1 nodejs-1-app
