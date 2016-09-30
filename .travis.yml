@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker pull barinjato/my-image-1
+script:
+  - docker ps -all
+  - docker info
+  - docker version
+  - docker run --tty --rm barinjato/my-image-1 ls -horta
