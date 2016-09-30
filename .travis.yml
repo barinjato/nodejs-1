@@ -2,6 +2,7 @@ sudo: required
 services:
   - docker
 before_install:
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" hub.docker.com
   - docker pull barinjato/my-image-1
 script:
   - docker ps -all
